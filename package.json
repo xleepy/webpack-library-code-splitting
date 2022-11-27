@@ -1,0 +1,21 @@
+{
+  "name": "@test/webpack-code-splitting-issue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "build": "lerna run build && npm run link-deps",
+    "link-deps": "lerna bootstrap --force-local && lerna link --force-local"
+  },
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "packages/client",
+    "packages/components/*",
+    "packages/configs/*"
+  ],
+  "devDependencies": {
+    "lerna": "^6.0.3"
+  }
+}
